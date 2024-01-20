@@ -13,9 +13,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Anjas"),
+          title: Text("Basics Flutter"),
           backgroundColor: Colors.purple,
         ),
+        body: Text("Body"),
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
+          BottomNavigationBarItem(label: "Settings", icon: Icon(Icons.settings))
+        ]),
       ),
     );
   }
