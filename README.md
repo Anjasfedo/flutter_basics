@@ -14,3 +14,16 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+flutter is widget on widget
+
+MaterialWidget can contain Scaffold that a widget use as skeleton of app, it has white black widget.
+those two is skeleton of app
+
+
+flutter work with widget, its widget over widget over widget,
+
+every widget has arguments, and if we used arguments we need to pass another widget as arguments.
+
+widget use pascal case
+argument contain widget with colon (:)
