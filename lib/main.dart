@@ -16,8 +16,13 @@ class MyApp extends StatelessWidget {
           title: const Text("Basics Flutter"),
           backgroundColor: Colors.purple,
         ),
-        body: const Center(
-          child: Text("Body"),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              print("Anjas Gantenk");
+            },
+            child: const Text("Click Me"),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(items: const [
           BottomNavigationBarItem(
