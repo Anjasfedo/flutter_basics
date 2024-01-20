@@ -43,3 +43,7 @@ and use setState to change variable
 use currentIndex arguments to show the active bottomNavigationBar
 
 int use lowercase, not as String
+
+to create vertical widgets, we can use Column widget with children of list
+maximum size of column is follow its childs. to make the column take all screen we can use SizedBox widget to wrap it, and use width arguments
+to get maximum with as width arguments, we use double.infinity, that will surely take max width as we have
