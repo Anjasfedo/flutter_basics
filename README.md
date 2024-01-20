@@ -33,4 +33,9 @@ used only for first child widget from the parent widget, to avoid use 2 times co
 
 use comma (,) on every end of bracket (`)`)
 
+if we change something on MyApp, we need to do restart, not only hot reload to get the changes
 
+stateless widget mean the screen will not change
+so we need to statefull widget
+
+and use setState to change variable
