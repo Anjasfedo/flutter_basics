@@ -27,3 +27,10 @@ every widget has arguments, and if we used arguments we need to pass another wid
 
 widget use pascal case
 argument contain widget with colon (:)
+
+use constant with const on every arguments
+used only for first child widget from the parent widget, to avoid use 2 times const, because we only need to use it once for every arguments
+
+use comma (,) on every end of bracket (`)`)
+
+

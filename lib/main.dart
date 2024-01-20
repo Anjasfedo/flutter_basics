@@ -13,13 +13,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Basics Flutter"),
+          title: const Text("Basics Flutter"),
           backgroundColor: Colors.purple,
         ),
-        body: Text("Body"),
-        bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
-          BottomNavigationBarItem(label: "Settings", icon: Icon(Icons.settings))
+        body: const Center(
+          child: Text("Body"),
+        ),
+        bottomNavigationBar: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(
+            label: "Home",
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: "Settings",
+            icon: Icon(Icons.settings),
+          )
         ]),
       ),
     );
