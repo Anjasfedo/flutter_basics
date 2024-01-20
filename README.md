@@ -39,3 +39,7 @@ stateless widget mean the screen will not change
 so we need to statefull widget
 
 and use setState to change variable
+
+use currentIndex arguments to show the active bottomNavigationBar
+
+int use lowercase, not as String
