@@ -20,7 +20,6 @@ flutter is widget on widget
 MaterialWidget can contain Scaffold that a widget use as skeleton of app, it has white black widget.
 those two is skeleton of app
 
-
 flutter work with widget, its widget over widget over widget,
 
 every widget has arguments, and if we used arguments we need to pass another widget as arguments.
@@ -47,3 +46,7 @@ int use lowercase, not as String
 to create vertical widgets, we can use Column widget with children of list
 maximum size of column is follow its childs. to make the column take all screen we can use SizedBox widget to wrap it, and use width arguments
 to get maximum with as width arguments, we use double.infinity, that will surely take max width as we have
+
+if we use row/columnt, it gonna fill the width/height on it
+
+context used to tell flutter as bridge on each widget.
