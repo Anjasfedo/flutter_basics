@@ -26,33 +26,38 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.purple.shade400,
         ),
         body: Center(
-          child: SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(foregroundColor: Colors.grey.shade900, backgroundColor: Colors.blue),
-                  onPressed: () {
-                    setState(() {
-                      buttonName = "Clicked";
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      buttonName = "Clicked";
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-              ],
-            ),
-          ),
+          child: currentIndex == 0
+              ? Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.grey.shade900,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.grey.shade900,
+                            backgroundColor: Colors.purple.shade400),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = "Clicked";
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            buttonName = "Clicked";
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                    ],
+                  ),
+                )
+              : const SizedBox(),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
