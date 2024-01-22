@@ -20,7 +20,6 @@ flutter is widget on widget
 MaterialWidget can contain Scaffold that a widget use as skeleton of app, it has white black widget.
 those two is skeleton of app
 
-
 flutter work with widget, its widget over widget over widget,
 
 every widget has arguments, and if we used arguments we need to pass another widget as arguments.
@@ -50,3 +49,4 @@ to get maximum with as width arguments, we use double.infinity, that will surely
 
 if we use row/columnt, it gonna fill the width/height on it
 
+context used to tell flutter as bridge on each widget.
