@@ -15,20 +15,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const FirstPage(),
-    );
+        debugShowCheckedModeBanner: false, home: const MyAppExtension());
   }
 }
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({super.key});
+class MyAppExtension extends StatefulWidget {
+  const MyAppExtension({super.key});
 
   @override
-  State<FirstPage> createState() => _FirstPageState();
+  State<MyAppExtension> createState() => _MyAppExtensionState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _MyAppExtensionState extends State<MyAppExtension> {
   String buttonName = "Click";
 
   int currentIndex = 0;
@@ -65,13 +63,11 @@ class _FirstPageState extends State<FirstPage> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (BuildContext context) {
-                              return const SecondPage();
-                            },
+                            builder: (BuildContext context) => const NextPage(),
                           ),
                         );
                       },
-                      child: Text(buttonName),
+                      child: const Text("Next Page"),
                     ),
                   ],
                 ),
@@ -100,11 +96,21 @@ class _FirstPageState extends State<FirstPage> {
   }
 }
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+class NextPage extends StatefulWidget {
+  const NextPage({super.key});
 
   @override
+  State<NextPage> createState() => _NextPageState();
+}
+
+class _NextPageState extends State<NextPage> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(),);
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basics Flutter"),
+        backgroundColor: Colors.purple.shade400,
+      ),
+    );
   }
 }
