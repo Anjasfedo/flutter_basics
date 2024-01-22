@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/next_page/next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,7 +84,8 @@ class _MyAppExtensionState extends State<MyAppExtension> {
                 child: _isCliked
                     ? Image.asset("images/img-blank.PNG")
                     : Image.network(
-                        "https://th.bing.com/th/id/OIP.Pjt6jc6iuVCBme-WGk9_NQHaDA?rs=1&pid=ImgDetMain")),
+                        "https://th.bing.com/th/id/OIP.Pjt6jc6iuVCBme-WGk9_NQHaDA?rs=1&pid=ImgDetMain"),
+              ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
@@ -107,21 +109,4 @@ class _MyAppExtensionState extends State<MyAppExtension> {
   }
 }
 
-class NextPage extends StatefulWidget {
-  const NextPage({super.key});
 
-  @override
-  State<NextPage> createState() => _NextPageState();
-}
-
-class _NextPageState extends State<NextPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Basics Flutter"),
-        backgroundColor: Colors.purple.shade400,
-      ),
-    );
-  }
-}
