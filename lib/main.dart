@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Basics Flutter"),
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.purple.shade400,
         ),
         body: Center(
           child: SizedBox(
@@ -34,6 +34,7 @@ class _MyAppState extends State<MyApp> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(foregroundColor: Colors.grey.shade900, backgroundColor: Colors.blue),
                   onPressed: () {
                     setState(() {
                       buttonName = "Clicked";
