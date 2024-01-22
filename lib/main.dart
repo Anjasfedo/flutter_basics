@@ -14,8 +14,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false, home: const MyAppExtension());
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false, home: MyAppExtension());
   }
 }
 
@@ -30,6 +30,8 @@ class _MyAppExtensionState extends State<MyAppExtension> {
   String buttonName = "Click";
 
   int currentIndex = 0;
+
+  bool _isCliked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,16 @@ class _MyAppExtensionState extends State<MyAppExtension> {
                   ],
                 ),
               )
-            : Image.asset("images/img-blank.PNG"),
+            : GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _isCliked = !_isCliked;
+                  });
+                },
+                child: _isCliked
+                    ? Image.asset("images/img-blank.PNG")
+                    : Image.network(
+                        "https://th.bing.com/th/id/OIP.Pjt6jc6iuVCBme-WGk9_NQHaDA?rs=1&pid=ImgDetMain")),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
