@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 )
-              : const SizedBox(),
+              : Image.network("https://images.pexels.com/photos/10255618/pexels-photo-10255618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
